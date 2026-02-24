@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Only Stable Timeline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Multiverse Background -->
+  <canvas id="stars"></canvas>
+
+  <!-- ===============================
+       PASSWORD SCREEN
+  ================================ -->
+  <section id="passwordSection" class="section active">
+    <div class="terminal">
+      <div class="terminal-inner">
+        <h2>Restricted Timeline Archive</h2>
+
+        <input id="passwordInput"
+               type="password"
+               placeholder="Enter Timeline Key">
+
+        <button id="unlockBtn">
+          Unlock
+        </button>
+
+        <p id="passwordError" class="error hidden">
+          Access Denied.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       MAIN EXPERIENCE
+  ================================ -->
+  <section id="mainSection" class="section hidden">
+
+    <!-- Fullscreen Memory -->
+    <div id="memoryLayer" class="memory-layer">
+      <img src="assets/memory.jpg" alt="Memory">
+      <div class="memory-vignette"></div>
+    </div>
+
+    <!-- Anniversary Overlay -->
+    <div id="anniversaryLayer" class="anniversary-layer">
+      <div class="anniversary-content">
+        <div>1 Year.</div>
+        <div>27 February.</div>
+        <br>
+        <div>Happy Anniversary.</div>
+      </div>
+    </div>
+
+    <!-- Terminal Screen -->
+    <div class="terminal-wrapper">
+      <div id="terminalFrame" class="terminal">
+        <div id="terminalScreen" class="terminal-inner">
+
+          <div id="output" class="output"></div>
+
+          <button id="choiceBtn" class="hidden">
+            I Choose This Timeline
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===============================
+       AUDIO
+  ================================ -->
+  <audio id="ambientSound" src="assets/audio/ambience.mp3" loop></audio>
+  <audio id="clickSound" src="assets/audio/click.mp3"></audio>
+  <audio id="swellSound" src="assets/audio/swell.mp3"></audio>
+  <audio id="transitionSound" src="assets/audio/transition.mp3"></audio>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
